@@ -23,7 +23,13 @@ lidian consume \
 - `--network`: Optional x402 network hint (`base` or `ethereum`)
 - `--json`: Output as JSON
 
-**Expected output:** Object with `data` and `credits` fields (`credits` are cent-based units).
+**Expected output:** Object with `executionId`, `data`, and `credits` fields (`credits` are cent-based units).
+
+Use `executionId` to submit feedback:
+
+```bash
+lidian feedback --execution-id "<execution_uuid>" --rank 9 --json
+```
 
 If execution fails due to auth or balance issues, run `lidian account --json` to diagnose.
 

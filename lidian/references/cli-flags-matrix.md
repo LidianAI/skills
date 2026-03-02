@@ -6,9 +6,9 @@ Agent-focused flag reference for `lidian`.
 
 | Flag | Type | Applies To | Required | Default | Values | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| `--api-key` | string | discover, consume, account | No | resolved | `ld_...` | Highest-priority auth source for that command |
-| `--api-base` | string URL | discover, consume, account | No | resolved | any valid base URL | Overrides env-based routing |
-| `--env` | string | discover, consume, account | No | `production` | `production`, `staging` | Maps to canonical API base URLs |
+| `--api-key` | string | discover, consume, feedback, account | No | resolved | `ld_...` | Highest-priority auth source for that command |
+| `--api-base` | string URL | discover, consume, feedback, account | No | resolved | any valid base URL | Overrides env-based routing |
+| `--env` | string | discover, consume, feedback, account | No | `production` | `production`, `staging` | Maps to canonical API base URLs |
 | `--json` | boolean | all commands | No | `false` | `true` when present | Machine-friendly output |
 | `--help` | boolean | all commands | No | `false` | `true` when present | Prints usage |
 
@@ -46,9 +46,18 @@ Agent-focused flag reference for `lidian`.
 | --- | --- | --- | --- | --- | --- |
 | `--json` | boolean | No | `false` | presence flag | Structured account response |
 
+## `lidian feedback`
+
+| Flag | Type | Required | Default | Values | Notes |
+| --- | --- | --- | --- | --- | --- |
+| `--execution-id` | UUID string | Yes | none | consume execution UUID | Returned from `lidian consume` |
+| `--rank` | integer | Yes | none | `0..10` | Quality score |
+| `--feedback` | string | No | unset | max 1000 chars | Optional freeform feedback |
+| `--json` | boolean | No | `false` | presence flag | Structured feedback response |
+
 ## Auth Resolution Order
 
-For commands that require auth (`discover`, `consume`, `account`):
+For commands that require auth (`discover`, `consume`, `feedback`, `account`):
 
 1. `--api-key`
 2. `LIDIAN_API_KEY`
@@ -73,6 +82,7 @@ For automated agents, prefer:
 ```bash
 lidian discover --q "<task>" --pageSize 1 --json --env production
 lidian consume --endpoint-id "<uuid>" --params '{"k":"v"}' --json --env production
+lidian feedback --execution-id "<execution_uuid>" --rank 8 --json --env production
 ```
 
 Use `--json` consistently for deterministic parsing.

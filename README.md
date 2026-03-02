@@ -6,7 +6,7 @@ Agent skills for operating Lidian via the REST-first CLI.
 
 - `lidian`
 
-The skill is defined in `skills/lidian/SKILL.md` with focused references for install, login, discover, consume, payments, and account flows.
+The skill is defined in `lidian/SKILL.md` with focused references for install, login, discover, consume, feedback, payments, and account flows.
 
 It also includes x402 local-wallet orchestration references:
 - shared x402 flow modules (`references/x402/`)
