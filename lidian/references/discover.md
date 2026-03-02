@@ -8,7 +8,7 @@ For local wallet payment orchestration after discover, see [x402/cli-first-api-s
 Search for endpoints:
 
 ```bash
-lidian discover --q "invoice OCR" --pageSize 1 --category finance --auth-type api_key --max-price 50 --json
+lidian discover --q "invoice OCR" --pageSize 1 --category finance --max-price 50 --json
 ```
 
 **Parameters:**

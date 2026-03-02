@@ -1,6 +1,6 @@
 # Payments
 
-## Prepaid Balance (default rail)
+## Prepaid Balance (default when auth is present)
 
 Use your existing prepaid balance:
 
@@ -23,6 +23,10 @@ lidian consume \
   --payment-rail x402 \
   --json
 ```
+
+When `--payment-rail` is omitted:
+- with auth: `prepaid_credits`
+- without auth: `x402`
 
 **Note:** CLI uses API-managed preflight/verify endpoints. Wallet signing is handled server-side in v1.
 

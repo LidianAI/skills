@@ -57,7 +57,9 @@ Agent-focused flag reference for `lidian`.
 
 ## Auth Resolution Order
 
-For commands that require auth (`discover`, `consume`, `feedback`, `account`):
+Auth is optional for `discover` and `consume` (x402 flow).
+Auth is usually required for `account`.
+`feedback` can be anonymous only for executions that were anonymous.
 
 1. `--api-key`
 2. `LIDIAN_API_KEY`
