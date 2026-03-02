@@ -37,7 +37,7 @@ Agent-focused flag reference for `lidian`.
 | --- | --- | --- | --- | --- | --- |
 | `--endpoint-id` | UUID string | Yes | none | endpoint UUID | Required target endpoint |
 | `--params` | JSON object string | No | `{}` | valid JSON object | Fails if invalid JSON/object |
-| `--payment-rail` | string | No | `prepaid_credits` | `prepaid_credits`, `x402` | Payment mode |
+| `--payment-rail` | string | No | `auto` | `prepaid_credits`, `x402` | Auto default: prepaid with auth, x402 without auth |
 | `--network` | string | No | unset | `base`, `ethereum` | x402 network hint |
 
 ## `lidian account`

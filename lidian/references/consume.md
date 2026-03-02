@@ -19,7 +19,9 @@ lidian consume \
 **Parameters:**
 - `--endpoint-id`: UUID of the endpoint to call
 - `--params`: JSON object with endpoint parameters
-- `--payment-rail`: Payment method (optional)
+- `--payment-rail`: Payment method (optional). Default behavior:
+  - with API key/token: `prepaid_credits`
+  - without auth: `x402`
 - `--network`: Optional x402 network hint (`base` or `ethereum`)
 - `--json`: Output as JSON
 
