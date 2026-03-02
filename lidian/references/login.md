@@ -17,3 +17,11 @@ Optionally set API base URL:
 ```bash
 export LIDIAN_API_BASE="https://api.lidian.ai"
 ```
+
+Or select environment:
+
+```bash
+export LIDIAN_ENV="staging" # production|staging
+```
+
+For non-interactive agents, prefer passing `--key` and setting `LIDIAN_ENV`.

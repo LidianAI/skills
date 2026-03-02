@@ -1,6 +1,6 @@
 interface:
   display_name: "Lidian CLI"
-  short_description: "Query and execute API endpoints with the Lidian CLI"
+  short_description: "Discover and consume API endpoints with the Lidian CLI"
   icon_small: "./assets/logo.svg"
   icon_large: "./assets/logo.svg"
   brand_color: "#6366F1"

@@ -1,6 +1,6 @@
 # Account
 
-Check your balance and user info:
+Check balance and account readiness before/after paid consumption:
 
 ```bash
 lidian account --json
